@@ -1,21 +1,26 @@
 package com.kevinnam.agileboard.models;
 
+import android.support.annotation.IntRange;
+
 /**
  * Card model class
  * Created by kevin on 14/05/2017.
  */
 
 public class Card {
+    public final static int MIN_ESTIMATE_POINT = 1;
+    public final static int MAX_ESTIMATE_POINT = 99;
+
     private String title;
     private String description;
     private int estimate;
     private String columnKey;
 
     public Card() {
-        this.estimate = 1;
+        this.estimate = MIN_ESTIMATE_POINT;
     }
 
-    public Card(String title, String description, int estimate) {
+    public Card(String title, String description, @IntRange(from=MIN_ESTIMATE_POINT,to=MAX_ESTIMATE_POINT) int estimate) {
         this.title = title;
         this.description = description;
         this.estimate = estimate;
