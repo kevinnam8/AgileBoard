@@ -19,7 +19,7 @@ public class Card {
         this.title = title;
         this.description = description;
         this.estimate = estimate;
-        this.columnKey = Column.KEY_STARTING;     //default column
+        this.columnKey = Column.KEY_TODO;     //default column
     }
 
     public String getTitle() {

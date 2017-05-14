@@ -14,10 +14,6 @@ import static org.junit.Assert.assertEquals;
  */
 public class CardUnitTest {
 
-    /**
-     *
-     * @throws Exception
-     */
     @Test
     public void card_CreateAndReadTest() throws Exception {
         String title = "cardTitle";
@@ -34,8 +30,8 @@ public class CardUnitTest {
     public void card_ColumnStatusSetAndGetTest() throws Exception {
         Card card = new Card("title", "description", 21);
 
-        // test if the initial column is "STARTING"
-        assertEquals("Initial column", card.getColumnKey(), Column.KEY_STARTING);
+        // test if the initial column is "TO DO"
+        assertEquals("Initial column", card.getColumnKey(), Column.KEY_TODO);
 
         String columnStatus = Column.KEY_DONE;
         card.setColumnKey(columnStatus);
