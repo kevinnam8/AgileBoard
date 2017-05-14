@@ -19,6 +19,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".NewCardActivity"
+            android:label="@string/title_new_card"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
